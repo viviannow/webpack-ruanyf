@@ -225,7 +225,7 @@ module.exports = {
 };
 ```
 
-In `webpack.config.js`, `module.loaders` field is used to assign loaders. The above snippet uses `babel-loader` which also needs plugins [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) and [babel-preset-react](https://www.npmjs.com/package/babel-preset-react) to transpile ES6 and React. You can also take another way to set the babel query option. 
+In `webpack.config.js`, `module.loaders` field is used to assign loaders. The above snippet uses `babel-loader` which also needs plugins [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) and [babel-preset-react](https://www.npmjs.com/package/babel-preset-react) to transpile ES6 and React. You can also take another way to set the babel query option.  在 `webpack.config.js`中，`module.loaders`是用来引用loaders的。上面用babel-loadder的同样要用插件babel-preset-es2015，与babel-preset-react去转义ES6与
 
 ```javascript
 module: {
@@ -289,7 +289,7 @@ module.exports = {
 };
 ```
 
-Attention, you have to use two loaders to transform CSS file. First is [CSS-loader](https://www.npmjs.com/package/css-loader) to read CSS file, and another is [Style-loader](https://www.npmjs.com/package/style-loader) to insert Style tag into HTML page. Different loaders are linked by exclamation mark(!).
+Attention, you have to use two loaders to transform CSS file. First is [CSS-loader](https://www.npmjs.com/package/css-loader) to read CSS file, and another is [Style-loader](https://www.npmjs.com/package/style-loader) to insert Style tag into HTML page. Different loaders are linked by exclamation mark(!). 注意，你得用
 
 After launching the server, `index.html` will have internal style sheet.
 
