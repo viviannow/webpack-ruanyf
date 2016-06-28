@@ -1,45 +1,48 @@
-This repo is a collection of simple demos of Webpack.
+This repo is a collection of simple demos of Webpack. 这个仓库是一些简单的webpack的例子的集合。
 
-These demos are purposely written in a simple and clear style. You will find no difficulty in following them to learn the powerful tool.
+These demos are purposely written in a simple and clear style. You will find no difficulty in following them to learn the powerful tool.这些例子书写的都很简洁，你学起这个工具来不会有难度。
 
-## How to use
+## How to use 如何 使用
 
-First, install [Webpack](https://www.npmjs.com/package/webpack) and [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server) globally.
+First, install [Webpack](https://www.npmjs.com/package/webpack) and [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server) globally.首先，你要全局的安装 webpack与webpack-dev-server。
 
 ```bash
-$ npm i -g webpack webpack-dev-server
+//i =>install
+$ npm i -g webpack webpack-dev-server 
 ```
 
-Then, clone the repo and install the dependencies.
+Then, clone the repo and install the dependencies. 然后，克隆仓库并安装依赖
 
 ```bash
 $ git clone git@github.com:ruanyf/webpack-demos.git
 $ cd webpack-demos
-$ npm install
+//下面是根据package.json安装
+$ npm install  
 ```
 
-Now, play with the source files under the repo's demo* directories.
+Now, play with the source files under the repo's demo* directories. 现在就可以运行demo...目录下的源文件了。
 
 ```bash
 $ cd demo01
-$ webpack-dev-server
+//下面是根据webpack.config.js的配制运行的。启动一个本地服务 
+$ webpack-dev-server 
 ```
 
-Visit http://127.0.0.1:8080 with your browser.
+Visit http://127.0.0.1:8080 with your browser. 用浏览器去访问 http://127.0.0.1:8080
 
-## Foreword: What is Webpack
+## Foreword: What is Webpack 前言：什么是webpack
 
-Webpack is a front-end build systems like Grunt and Gulp.
+Webpack is a front-end build systems like Grunt and Gulp. webpack是一个类似于grunt与gulp的前端构建工具
 
-It can be used as a module bundler similar to Browserify, and do [much more](http://webpack.github.io/docs/what-is-webpack.html).
+It can be used as a module bundler similar to Browserify, and do [much more](http://webpack.github.io/docs/what-is-webpack.html).  它可以像Browserify一样打包模块。并且可以做更多。
 
 ```bash
 $ browserify main.js > bundle.js
-# be equivalent to
+# be equivalent to 等同于
 $ webpack main.js bundle.js
 ```
 
-Its configuration file is `webpack.config.js`.
+Its configuration file is `webpack.config.js`. 它的配制文件是webpack.config.js
 
 ```javascript
 // webpack.config.js
@@ -51,21 +54,21 @@ module.exports = {
 };
 ```
 
-After having `webpack.config.js`, you can invoke Webpack without any arguments.
+After having `webpack.config.js`, you can invoke Webpack without any arguments.有了webpack.config.js文件你就可以不跟参数启用webpack。
 
 ```bash
 $ webpack
 ```
 
-Some command-line options you should know.
+Some command-line options you should know. 一些你要知道的命令行工具
 
-- `webpack` – for building once for development
-- `webpack -p` – for building once for production (minification)
-- `webpack --watch` – for continuous incremental build
-- `webpack -d` – to include source maps
-- `webpack --colors` – for making things pretty
+- `webpack` – for building once for development 在开发时构建一次
+- `webpack -p` – for building once for production (minification)再生产环境中构建 (minification微小)
+- `webpack --watch` – for continuous incremental build 监听文件改动，持续构建
+- `webpack -d` – to include source maps 引用源码的映射
+- `webpack --colors` – for making things pretty 优化输出
 
-To produce a production ready application, you could write `scripts` field in your package.json file as following.
+To produce a production ready application, you could write `scripts` field in your package.json file as following. 创建要投入生产的应用，你可以在package.json文件中添加 scripts字段，如下：
 
 ```javascript
 // package.json
@@ -79,30 +82,30 @@ To produce a production ready application, you could write `scripts` field in yo
 }
 ```
 
-## Index
+## Index 索引
 
-1. [Entry file](#demo01-entry-file-source)
-1. [Multiple entry files](#demo02-multiple-entry-files-source)
-1. [Babel-loader](#demo03-babel-loader-source)
-1. [CSS-loader](#demo04-css-loader-source)
-1. [Image loader](#demo05-image-loader-source)
-1. [CSS Module](#demo06-css-module-source)
-1. [UglifyJs Plugin](#demo07-uglifyjs-plugin-source)
-1. [HTML Webpack Plugin and Open Browser Webpack Plugin](#demo08-html-webpack-plugin-and-open-browser-webpack-plugin-source)
-1. [Environment flags](#demo09-environment-flags-source)
-1. [Code splitting](#demo10-code-splitting-source)
-1. [Code splitting with bundle-loader](#demo11-code-splitting-with-bundle-loader-source)
-1. [Common chunk](#demo12-common-chunk-source)
+1. [Entry file 入口文件](#demo01-entry-file-source)
+1. [Multiple entry files 多入口文件](#demo02-multiple-entry-files-source)
+1. [Babel-loader babel加载器](#demo03-babel-loader-source)
+1. [CSS-loader css加载器](#demo04-css-loader-source)
+1. [Image loader 图片加载器](#demo05-image-loader-source)
+1. [CSS Module css组件](#demo06-css-module-source)
+1. [UglifyJs Plugin UglifyJs插件](#demo07-uglifyjs-plugin-source)
+1. [HTML Webpack Plugin and Open Browser Webpack Plugin webpack的html与浏览器插件](#demo08-html-webpack-plugin-and-open-browser-webpack-plugin-source)
+1. [Environment flags 环境 标记](#demo09-environment-flags-source)
+1. [Code splitting 代码分离](#demo10-code-splitting-source)
+1. [Code splitting with bundle-loader 用bundle-loader分离代码](#demo11-code-splitting-with-bundle-loader-source)
+1. [Common chunk ](#demo12-common-chunk-source)
 1. [Vendor chunk](#demo13-vendor-chunk-source)
-1. [Exposing Global Variables](#demo14-exposing-global-variables-source)
-1. [Hot Module Replacement](#demo15-hot-module-replacement-source)
-1. [React router](#demo16-react-router-source)
+1. [Exposing Global Variables 暴露全局变量](#demo14-exposing-global-variables-source)
+1. [Hot Module Replacement ](#demo15-hot-module-replacement-source)
+1. [React router react 路由](#demo16-react-router-source)
 
-## Demo01: Entry file ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo01))
+## Demo01: Entry file ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo01)) 入口文件
 
-Entry file is a file which Webpack will read to build bundle.js.
+Entry file is a file which Webpack will read to build bundle.js. webpack读取入口文件并编译成bundle.js
 
-For example, `main.js` is an entry file.
+For example, `main.js` is an entry file. 例如，main.js是一个入口文件。
 
 ```javascript
 // main.js
@@ -119,7 +122,7 @@ index.html
 </html>
 ```
 
-Webpack follows `webpack.config.js` to build `bundle.js`.
+Webpack follows `webpack.config.js` to build `bundle.js`. webpack根据`webpack.config.js`去构建`bundle.js`
 
 ```javascript
 // webpack.config.js
@@ -131,7 +134,7 @@ module.exports = {
 };
 ```
 
-Launch the server, visit http://127.0.0.1:8080 .
+Launch the server, visit http://127.0.0.1:8080 . 启动服务器，访问网址...
 
 ```bash
 $ webpack-dev-server
@@ -139,7 +142,7 @@ $ webpack-dev-server
 
 ## Demo02: Multiple entry files ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo02))
 
-Multiple entry files are allowed. It is useful for a multi-page app.
+Multiple entry files are allowed. It is useful for a multi-page app. 多入口文件是支持的，这对多入口应用来说很有用。
 
 ```javascript
 // main1.js
@@ -174,9 +177,9 @@ module.exports = {
 };
 ```
 
-## Demo03: Babel-loader ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo03))
+## Demo03: Babel-loader ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo03)) babel加载器
 
-Loaders are preprocessors which transform a resource file of your app ([more info](http://webpack.github.io/docs/using-loaders.html)). For example, [Babel-loader](https://www.npmjs.com/package/babel-loader) can transform JSX/ES6 file into JS file. Official doc has a complete list of [loaders](http://webpack.github.io/docs/list-of-loaders.html).
+Loaders are preprocessors which transform a resource file of your app ([more info](http://webpack.github.io/docs/using-loaders.html)). For example, [Babel-loader](https://www.npmjs.com/package/babel-loader) can transform JSX/ES6 file into JS file. Official doc has a complete list of [loaders](http://webpack.github.io/docs/list-of-loaders.html). loaders是一个可以转换你应用源文件的预处理器，如Babel-loader可以把你的JSX/ES6文件转换成js文件 ，官方有完整的loaders的列表
 
 `main.jsx` is a JSX file.
 
@@ -212,6 +215,7 @@ module.exports = {
   module: {
     loaders:[
       {
+        // 加载babel-loader ，处理js或者jsx结尾的文件
         test: /\.js[x]?$/,
         exclude: /node_modules/,
         loader: 'babel-loader?presets[]=es2015&presets[]=react'
@@ -221,7 +225,7 @@ module.exports = {
 };
 ```
 
-In `webpack.config.js`, `module.loaders` field is used to assign loaders. The above snippet uses `babel-loader` which also needs plugins [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) and [babel-preset-react](https://www.npmjs.com/package/babel-preset-react) to transpile ES6 and React. You can also take another way to set the babel query option.
+In `webpack.config.js`, `module.loaders` field is used to assign loaders. The above snippet uses `babel-loader` which also needs plugins [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) and [babel-preset-react](https://www.npmjs.com/package/babel-preset-react) to transpile ES6 and React. You can also take another way to set the babel query option. 
 
 ```javascript
 module: {
@@ -975,7 +979,7 @@ Let's imagine a little app with a dashboard, inbox, and calendar.
 $ webpack-dev-server --history-api-fallback
 ```
 
-## Useful links
+## Useful links 参考链接
 
 - [Webpack docs](http://webpack.github.io/docs/)
 - [webpack-howto](https://github.com/petehunt/webpack-howto), by Pete Hunt
