@@ -12,6 +12,7 @@ module.exports = {
       { test: /\.js[x]?$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' },
     ]
   },
+  // 创建公用部分
   plugins: [
     new CommonsChunkPlugin('init.js')
   ]

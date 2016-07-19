@@ -1,3 +1,5 @@
+{/*react文件 与相关的引用*/}
+
 const React = require('react');
 const ReactDOM = require('react-dom');
 

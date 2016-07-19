@@ -1,4 +1,6 @@
+// 生成html 不会有.html文件
 var HtmlwebpackPlugin = require('html-webpack-plugin');
+// 生成 浏览器  自动打开浏览器
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {

@@ -1,7 +1,7 @@
 .h1 {
   color:red;
 }
-
+/*这是全局可用的*/
 :global(.h2) {
   color: blue;
 }
