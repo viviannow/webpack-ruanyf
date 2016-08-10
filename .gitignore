@@ -1,2 +1,8 @@
+#模块
 node_modules
+#日志
 npm-debug.log
+#缓存
+cache
+
+
