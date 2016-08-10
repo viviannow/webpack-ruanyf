@@ -139,8 +139,9 @@ Webpack 是一个模块打包器。
 			  }
 		  ]
 	  },
-	  plugins: [
-			  new webpack.optimize.CommonsChunkPlugin('common.js') //将公用模块，打包进common.js
+	  plugins: [//plugins
+			  new webpack.optimize.CommonsChunkPlugin('common.js'), //将公用模块，打包进common.js
+			  new webpack.BannerPlugin('This file is created by viviannow')//插件的作用是给输出的文件头部添加注释信息。
 	  ],
 	  resolve: {
 		  extensions: ['', '.js', '.jsx'] //后缀名自动补全
