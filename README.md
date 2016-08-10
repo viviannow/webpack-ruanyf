@@ -1139,6 +1139,6 @@ $ webpack-dev-server --history-api-fallback
 - [Browserify vs Webpack](https://medium.com/@housecor/browserify-vs-webpack-b3d7ca08a0a9), by Cory House
 - [React Webpack cookbook](https://christianalfoni.github.io/react-webpack-cookbook/index.html), by Christian Alfoni
 - [中文](http://zhaoda.net/webpack-handbook/preface.html) 
-
+- [LIST OF LOADERS](http://webpack.github.io/docs/list-of-loaders.html)
 
 MIT
